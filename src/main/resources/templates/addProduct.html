@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Add a New Product</h1>
+
+
+<div th:if="${successMessage}" style="color: green; font-weight: bold;">
+    <p th:text="${successMessage}"></p>
+</div>
+
+<form th:action="@{/saveProduct}" method="post" th:object="${product}">
+    <label for="name">Name:</label>
+    <input type="text" id="name" th:field="*{name}" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" th:field="*{price}" required>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" th:field="*{category}" required>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

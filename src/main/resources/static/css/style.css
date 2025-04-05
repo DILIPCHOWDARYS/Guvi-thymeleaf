@@ -1,0 +1,264 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling with subtle gradient */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #2d3436;
+    line-height: 1.6;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+/* Elegant Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Modern Header Styling */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #20bf6b;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #20bf6b 0%, #0b4d3c 100%);
+    border-radius: 2px;
+}
+
+/* Navigation Styling */
+nav, .navigation, .menu {
+    display: flex;
+    margin: 20px 0;
+    padding: 15px 0;
+}
+
+/* Navigation Links - Apply spacing between navigation items */
+nav a, .nav-link, .menu-item {
+    color: #20bf6b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin-right: 30px; /* Add space between navigation items */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:last-child, .nav-link:last-child, .menu-item:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}
+
+/* Hover effect for navigation */
+nav a:hover, .nav-link:hover, .menu-item:hover {
+    color: #0b4d3c;
+}
+
+/* Add underline on hover */
+nav a::after, .nav-link::after, .menu-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #20bf6b;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after, .nav-link:hover::after, .menu-item:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Success Message */
+.success-message {
+    display: none;  /* Initially hidden */
+    background: linear-gradient(to right, #d4edda, #c3e6cb);
+    color: #155724;
+    padding: 15px;
+    border-left: 5px solid #20bf6b;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(32, 191, 107, 0.1);
+}
+
+/* Stylish Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #2d3436;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #20bf6b;
+    box-shadow: 0 0 0 4px rgba(32, 191, 107, 0.1);
+    outline: none;
+}
+
+/* Modern Buttons */
+button {
+    background: linear-gradient(to right, #20bf6b, #0b4d3c);
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #1cab5e, #0a4535);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Elegant Table */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: linear-gradient(to right, #20bf6b, #0b4d3c);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Links Styling */
+a {
+    color: #20bf6b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #0b4d3c;
+    text-decoration: none;
+}
+
+/* Specific styling for your nav menu links */
+a[href*="add"], a[href*="display"] {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+    font-weight: 600;
+}
+
+/* Add a dot separator between navigation items */
+a[href*="add"]:after {
+    content: "•";
+    position: absolute;
+    right: -20px;
+    color: #20bf6b;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    nav a, .nav-link, .menu-item {
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    a[href*="add"], a[href*="display"] {
+        margin-right: 15px;
+    }
+
+    a[href*="add"]:after {
+        right: -10px;
+    }
+
+    input, select, textarea, button {
+        padding: 12px;
+    }
+
+    th, td {
+        padding: 12px 10px;
+    }
+}
